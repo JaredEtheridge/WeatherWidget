@@ -43,8 +43,8 @@ def showWeather():
             local_time = datetime.utcfromtimestamp(utc_with_tz) 
             return local_time.time()
         temp = int(weather_info['main']['temp'] - kelvin)                                     #converting default kelvin value to Celcius
-        feels_like_temp = int(weather_info['main']['feels_like'] - kelvin)
-        temp_fahrenheit = int(temp * 9/5 + 32)
+        feels_like_temp = int(weather_info['main']['feels_like'] - kelvin)                    
+        temp_fahrenheit = int(temp * 9/5 + 32)                                                #converting C value to F
         feels_like_temp_fahrenheit = int(feels_like_temp * 9/5 + 32)
         pressure = weather_info['main']['pressure']
         humidity = weather_info['main']['humidity']
